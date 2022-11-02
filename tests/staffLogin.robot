@@ -1,6 +1,5 @@
 *** Settings ***
 Documentation       Login Functionality
-
 Library             SeleniumLibrary
 
 
@@ -16,6 +15,6 @@ Verify Successful Login to Library Management System
     Wait Until Element Is Visible    id:loginuname    timeout=5
     Input Text    id:loginuname    ${UserName}
     Input Password    id:loginpassword    ${Password}
-    Click Element    id:submit
-    Element Should Be Visible    css:[href="/dashboard/"]
+    Click Element     css:input[type='submit']
+    Element Should Be Visible    css:[href="/"]
     Close Browser
