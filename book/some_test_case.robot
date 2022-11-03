@@ -2,21 +2,16 @@
 Documentation       Add Book Functionality
 Library             SeleniumLibrary
 
-
-*** Variables ***
-${BrowserUrl}       http://127.0.0.1:8000/stafflogin/    #Scalar
-
-${UserName}         anvong    #Scalar
-${Password}         123456    #Scalar
+Resource    book_resource.robot
 
 
 *** Test Cases ***
 Verify Successful Login to Library Management System
-    Open Browser    ${BrowserUrl}    Chrome
+    Open Web 
+    
     Wait Until Element Is Visible    id:loginuname    timeout=5
-    Input Text    id:loginuname    ${UserName}
-    Input Password    id:loginpassword    ${Password}
-    Click Element    css:input[type='submit']
+    Login Into System    ${UserName}    ${Password}
+    Page Login Success
     # Element Should Be Visible    css:[href="/dashboard/"]
 
 Verify Input Of The Book Info
@@ -53,3 +48,25 @@ Verify Issue A Book
     Input Text    id:book1             12345
     Input Text    id:studentid        s123456
     Click Element    //button[contains(text(),'Submit')]
+    
+
+Verify Text On Login Form
+    Open Browser    ${BrowserUrl}    Chrome
+    # Wait Until Element Is Visible    css:input[type='submit']    timeout=5
+    # Maximize Browser Window
+    Go To         http://127.0.0.1:8000/stafflogin/
+    # Input Text    id:book1             12345
+    # Input Text    id:studentid        s123456
+    # Click Element    //button[contains(text(),'Submit')]
+    # //h1[normalize-space()='Staff Login']
+    
+    # to check a element on login page
+    Page Should Contain Element    //h1[normalize-space()='Staff Login']
+    Click Button    //input[@value='Login']
+    ${something}=   Get Source
+    # to check a text on Login page
+    Page Should Contain    Please enter your username and password!
+    Log    ${something}
+    
+
+    Close Browser
