@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.10.4 on win32)" generated="20221104 17:37:27.931" rpa="false" schemaversion="3">
+<suite id="s1" name="RPT582-LibraryManagementSystem-GroupWork" source="C:\CDU_coding\PRT582-Code\RPT582-LibraryManagementSystem-GroupWork">
+<suite id="s1-s1" name="Tests" source="C:\CDU_coding\PRT582-Code\RPT582-LibraryManagementSystem-GroupWork\tests">
+<suite id="s1-s1-s1" name="staffLogin" source="C:\CDU_coding\PRT582-Code\RPT582-LibraryManagementSystem-GroupWork\tests\staffLogin.robot">
+<test id="s1-s1-s1-t1" name="Verify Successful Login to Library Management System" line="16">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${BrowserUrl}</arg>
+<arg>Chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20221104 17:37:28.300" level="INFO">Opening browser 'Chrome' to base url 'http://127.0.0.1:8000/stafflogin/'.</msg>
+<status status="PASS" starttime="20221104 17:37:28.299" endtime="20221104 17:37:30.374"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20221104 17:37:30.375" endtime="20221104 17:37:30.498"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>id:loginuname</arg>
+<arg>timeout=5</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20221104 17:37:30.498" endtime="20221104 17:37:30.560"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:loginuname</arg>
+<arg>${UserName}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20221104 17:37:30.563" level="INFO">Typing text 'CDU' into text field 'id:loginuname'.</msg>
+<status status="PASS" starttime="20221104 17:37:30.561" endtime="20221104 17:37:30.730"/>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<arg>id:loginpassword</arg>
+<arg>${Password}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<msg timestamp="20221104 17:37:30.731" level="INFO">Typing password into text field 'id:loginpassword'.</msg>
+<msg timestamp="20221104 17:37:30.802" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20221104 17:37:30.879" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20221104 17:37:30.730" endtime="20221104 17:37:30.881"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>css:input[type='submit']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20221104 17:37:30.883" level="INFO">Clicking button 'css:input[type='submit']'.</msg>
+<status status="PASS" starttime="20221104 17:37:30.882" endtime="20221104 17:37:31.717"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>css:[href="/dashboard/"]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20221104 17:37:31.760" level="INFO">Element 'css:[href="/dashboard/"]' is displayed.</msg>
+<status status="PASS" starttime="20221104 17:37:31.718" endtime="20221104 17:37:31.762"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20221104 17:37:31.763" endtime="20221104 17:37:33.950"/>
+</kw>
+<status status="PASS" starttime="20221104 17:37:28.296" endtime="20221104 17:37:33.952"/>
+</test>
+<test id="s1-s1-s1-t2" name="Invalid Credential Login Test" line="26">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${BrowserUrl}</arg>
+<arg>Chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20221104 17:37:33.961" level="INFO">Opening browser 'Chrome' to base url 'http://127.0.0.1:8000/stafflogin/'.</msg>
+<status status="PASS" starttime="20221104 17:37:33.960" endtime="20221104 17:37:36.077"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20221104 17:37:36.078" endtime="20221104 17:37:36.219"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>id:loginuname</arg>
+<arg>timeout=5</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20221104 17:37:36.220" endtime="20221104 17:37:36.282"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:loginuname</arg>
+<arg>${WrongUserName}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20221104 17:37:36.285" level="INFO">Typing text 'Test' into text field 'id:loginuname'.</msg>
+<status status="PASS" starttime="20221104 17:37:36.282" endtime="20221104 17:37:36.430"/>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<arg>id:loginpassword</arg>
+<arg>${WrongPassword}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<msg timestamp="20221104 17:37:36.433" level="INFO">Typing password into text field 'id:loginpassword'.</msg>
+<msg timestamp="20221104 17:37:36.496" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20221104 17:37:36.570" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20221104 17:37:36.431" endtime="20221104 17:37:36.572"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>css:input[type='submit']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20221104 17:37:36.574" level="INFO">Clicking button 'css:input[type='submit']'.</msg>
+<status status="PASS" starttime="20221104 17:37:36.572" endtime="20221104 17:37:37.124"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>css:[href="/"]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20221104 17:37:37.209" level="INFO">Element 'css:[href="/"]' is displayed.</msg>
+<status status="PASS" starttime="20221104 17:37:37.125" endtime="20221104 17:37:37.211"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20221104 17:37:37.212" endtime="20221104 17:37:39.455"/>
+</kw>
+<status status="PASS" starttime="20221104 17:37:33.956" endtime="20221104 17:37:39.456"/>
+</test>
+<test id="s1-s1-s1-t3" name="Validation Test" line="36">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${BrowserUrl}</arg>
+<arg>Chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20221104 17:37:39.461" level="INFO">Opening browser 'Chrome' to base url 'http://127.0.0.1:8000/stafflogin/'.</msg>
+<status status="PASS" starttime="20221104 17:37:39.461" endtime="20221104 17:37:41.415"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20221104 17:37:41.416" endtime="20221104 17:37:41.540"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>id:loginuname</arg>
+<arg>timeout=5</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20221104 17:37:41.541" endtime="20221104 17:37:41.607"/>
+</kw>
+<kw name="Should Not Be Empty" library="BuiltIn">
+<arg>id:loginuname</arg>
+<doc>Verifies that the given item is not empty.</doc>
+<msg timestamp="20221104 17:37:41.609" level="INFO">Length is 13</msg>
+<status status="PASS" starttime="20221104 17:37:41.608" endtime="20221104 17:37:41.613"/>
+</kw>
+<kw name="Should Not Be Empty" library="BuiltIn">
+<arg>id:loginpassword</arg>
+<doc>Verifies that the given item is not empty.</doc>
+<msg timestamp="20221104 17:37:41.615" level="INFO">Length is 16</msg>
+<status status="PASS" starttime="20221104 17:37:41.614" endtime="20221104 17:37:41.618"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>css:input[type='submit']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20221104 17:37:41.619" level="INFO">Clicking button 'css:input[type='submit']'.</msg>
+<status status="PASS" starttime="20221104 17:37:41.618" endtime="20221104 17:37:41.768"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>css:[href="/"]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20221104 17:37:41.816" level="INFO">Element 'css:[href="/"]' is displayed.</msg>
+<status status="PASS" starttime="20221104 17:37:41.769" endtime="20221104 17:37:41.818"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20221104 17:37:41.819" endtime="20221104 17:37:44.064"/>
+</kw>
+<status status="PASS" starttime="20221104 17:37:39.459" endtime="20221104 17:37:44.065"/>
+</test>
+<doc>Login Functionality</doc>
+<status status="PASS" starttime="20221104 17:37:27.981" endtime="20221104 17:37:44.068"/>
+</suite>
+<status status="PASS" starttime="20221104 17:37:27.976" endtime="20221104 17:37:44.073"/>
+</suite>
+<status status="PASS" starttime="20221104 17:37:27.938" endtime="20221104 17:37:44.079"/>
+</suite>
+<statistics>
+<total>
+<stat pass="3" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="3" fail="0" skip="0" id="s1" name="RPT582-LibraryManagementSystem-GroupWork">RPT582-LibraryManagementSystem-GroupWork</stat>
+<stat pass="3" fail="0" skip="0" id="s1-s1" name="Tests">RPT582-LibraryManagementSystem-GroupWork.Tests</stat>
+<stat pass="3" fail="0" skip="0" id="s1-s1-s1" name="staffLogin">RPT582-LibraryManagementSystem-GroupWork.Tests.staffLogin</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

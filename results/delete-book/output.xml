@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.10.4 on win32)" generated="20221104 19:07:15.036" rpa="false" schemaversion="3">
+<suite id="s1" name="Delete Book" source="c:\CDU_coding\PRT582-Code\RPT582-LibraryManagementSystem-GroupWork\book\delete_book.robot">
+<test id="s1-t1" name="Verify Delete A Book Function" line="10">
+<kw name="Open Web" library="book_resource">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${BrowserUrl}</arg>
+<arg>${Browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20221104 19:07:15.920" level="INFO">Opening browser 'chrome' to base url 'http://127.0.0.1:8000'.</msg>
+<status status="PASS" starttime="20221104 19:07:15.917" endtime="20221104 19:07:17.861"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20221104 19:07:17.862" endtime="20221104 19:07:17.999"/>
+</kw>
+<status status="PASS" starttime="20221104 19:07:15.913" endtime="20221104 19:07:18.001"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20221104 19:07:18.003" endtime="20221104 19:07:18.015"/>
+</kw>
+<kw name="Login Into System" library="book_resource">
+<arg>${UserName}</arg>
+<arg>${Password}</arg>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>http://127.0.0.1:8000/stafflogin/</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20221104 19:07:18.021" level="INFO">Opening url 'http://127.0.0.1:8000/stafflogin/'</msg>
+<status status="PASS" starttime="20221104 19:07:18.019" endtime="20221104 19:07:18.115"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:loginuname</arg>
+<arg>${UserName}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20221104 19:07:18.118" level="INFO">Typing text 'CDU' into text field 'id:loginuname'.</msg>
+<status status="PASS" starttime="20221104 19:07:18.116" endtime="20221104 19:07:18.293"/>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<arg>id:loginpassword</arg>
+<arg>${Password}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<msg timestamp="20221104 19:07:18.295" level="INFO">Typing password into text field 'id:loginpassword'.</msg>
+<msg timestamp="20221104 19:07:18.361" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20221104 19:07:18.444" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20221104 19:07:18.294" endtime="20221104 19:07:18.445"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>css:input[type='submit']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221104 19:07:18.447" level="INFO">Clicking element 'css:input[type='submit']'.</msg>
+<status status="PASS" starttime="20221104 19:07:18.446" endtime="20221104 19:07:19.123"/>
+</kw>
+<status status="PASS" starttime="20221104 19:07:18.016" endtime="20221104 19:07:19.125"/>
+</kw>
+<kw name="Page Login Success" library="book_resource">
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>Message : Successfully logged in</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20221104 19:07:19.158" level="INFO">Current page contains text 'Message : Successfully logged in'.</msg>
+<status status="PASS" starttime="20221104 19:07:19.128" endtime="20221104 19:07:19.158"/>
+</kw>
+<status status="PASS" starttime="20221104 19:07:19.126" endtime="20221104 19:07:19.160"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<arg>delete-1-before.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20221104 19:07:19.379" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="delete-1-before.png"&gt;&lt;img src="delete-1-before.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20221104 19:07:19.161" endtime="20221104 19:07:19.379"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath://tbody/tr[1]/td[6]/a[1]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221104 19:07:19.382" level="INFO">Clicking element 'xpath://tbody/tr[1]/td[6]/a[1]'.</msg>
+<status status="PASS" starttime="20221104 19:07:19.381" endtime="20221104 19:07:19.531"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<arg>after-1-before.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20221104 19:07:19.779" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="after-1-before.png"&gt;&lt;img src="after-1-before.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20221104 19:07:19.533" endtime="20221104 19:07:19.780"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20221104 19:07:19.781" endtime="20221104 19:07:22.118"/>
+</kw>
+<status status="PASS" starttime="20221104 19:07:15.908" endtime="20221104 19:07:22.120"/>
+</test>
+<test id="s1-t2" name="Verify Delete Another Book Function At Line Two" line="21">
+<kw name="Open Web" library="book_resource">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${BrowserUrl}</arg>
+<arg>${Browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20221104 19:07:22.135" level="INFO">Opening browser 'chrome' to base url 'http://127.0.0.1:8000'.</msg>
+<status status="PASS" starttime="20221104 19:07:22.132" endtime="20221104 19:07:24.215"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20221104 19:07:24.216" endtime="20221104 19:07:24.357"/>
+</kw>
+<status status="PASS" starttime="20221104 19:07:22.130" endtime="20221104 19:07:24.358"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20221104 19:07:24.360" endtime="20221104 19:07:24.371"/>
+</kw>
+<kw name="Login Into System" library="book_resource">
+<arg>${UserName}</arg>
+<arg>${Password}</arg>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>http://127.0.0.1:8000/stafflogin/</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20221104 19:07:24.375" level="INFO">Opening url 'http://127.0.0.1:8000/stafflogin/'</msg>
+<status status="PASS" starttime="20221104 19:07:24.374" endtime="20221104 19:07:24.470"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:loginuname</arg>
+<arg>${UserName}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20221104 19:07:24.472" level="INFO">Typing text 'CDU' into text field 'id:loginuname'.</msg>
+<status status="PASS" starttime="20221104 19:07:24.471" endtime="20221104 19:07:24.667"/>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<arg>id:loginpassword</arg>
+<arg>${Password}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<msg timestamp="20221104 19:07:24.670" level="INFO">Typing password into text field 'id:loginpassword'.</msg>
+<msg timestamp="20221104 19:07:24.749" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20221104 19:07:24.838" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20221104 19:07:24.668" endtime="20221104 19:07:24.839"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>css:input[type='submit']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221104 19:07:24.841" level="INFO">Clicking element 'css:input[type='submit']'.</msg>
+<status status="PASS" starttime="20221104 19:07:24.840" endtime="20221104 19:07:25.510"/>
+</kw>
+<status status="PASS" starttime="20221104 19:07:24.372" endtime="20221104 19:07:25.511"/>
+</kw>
+<kw name="Page Login Success" library="book_resource">
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>Message : Successfully logged in</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20221104 19:07:25.549" level="INFO">Current page contains text 'Message : Successfully logged in'.</msg>
+<status status="PASS" starttime="20221104 19:07:25.517" endtime="20221104 19:07:25.550"/>
+</kw>
+<status status="PASS" starttime="20221104 19:07:25.514" endtime="20221104 19:07:25.551"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<arg>delete-row-2-before.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20221104 19:07:25.793" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="delete-row-2-before.png"&gt;&lt;img src="delete-row-2-before.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20221104 19:07:25.553" endtime="20221104 19:07:25.793"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath://tbody/tr[2]/td[6]/a[1]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221104 19:07:25.797" level="INFO">Clicking element 'xpath://tbody/tr[2]/td[6]/a[1]'.</msg>
+<status status="PASS" starttime="20221104 19:07:25.795" endtime="20221104 19:07:25.962"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<arg>delete-row-2-after.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20221104 19:07:26.233" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="delete-row-2-after.png"&gt;&lt;img src="delete-row-2-after.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20221104 19:07:25.964" endtime="20221104 19:07:26.234"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20221104 19:07:26.236" endtime="20221104 19:07:28.674"/>
+</kw>
+<status status="PASS" starttime="20221104 19:07:22.125" endtime="20221104 19:07:28.677"/>
+</test>
+<test id="s1-t3" name="Verify Delete Another Book Function At Line One" line="32">
+<kw name="Open Web" library="book_resource">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${BrowserUrl}</arg>
+<arg>${Browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20221104 19:07:28.692" level="INFO">Opening browser 'chrome' to base url 'http://127.0.0.1:8000'.</msg>
+<status status="PASS" starttime="20221104 19:07:28.690" endtime="20221104 19:07:30.799"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20221104 19:07:30.800" endtime="20221104 19:07:30.936"/>
+</kw>
+<status status="PASS" starttime="20221104 19:07:28.688" endtime="20221104 19:07:30.937"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20221104 19:07:30.939" endtime="20221104 19:07:30.950"/>
+</kw>
+<kw name="Login Into System" library="book_resource">
+<arg>${UserName}</arg>
+<arg>${Password}</arg>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>http://127.0.0.1:8000/stafflogin/</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20221104 19:07:30.957" level="INFO">Opening url 'http://127.0.0.1:8000/stafflogin/'</msg>
+<status status="PASS" starttime="20221104 19:07:30.956" endtime="20221104 19:07:31.051"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:loginuname</arg>
+<arg>${UserName}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20221104 19:07:31.056" level="INFO">Typing text 'CDU' into text field 'id:loginuname'.</msg>
+<status status="PASS" starttime="20221104 19:07:31.053" endtime="20221104 19:07:31.235"/>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<arg>id:loginpassword</arg>
+<arg>${Password}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<msg timestamp="20221104 19:07:31.238" level="INFO">Typing password into text field 'id:loginpassword'.</msg>
+<msg timestamp="20221104 19:07:31.308" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20221104 19:07:31.388" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20221104 19:07:31.236" endtime="20221104 19:07:31.389"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>css:input[type='submit']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221104 19:07:31.393" level="INFO">Clicking element 'css:input[type='submit']'.</msg>
+<status status="PASS" starttime="20221104 19:07:31.390" endtime="20221104 19:07:32.214"/>
+</kw>
+<status status="PASS" starttime="20221104 19:07:30.953" endtime="20221104 19:07:32.215"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<arg>delete-row-1-at-sencond-time-before.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20221104 19:07:32.428" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="delete-row-1-at-sencond-time-before.png"&gt;&lt;img src="delete-row-1-at-sencond-time-before.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20221104 19:07:32.217" endtime="20221104 19:07:32.429"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath://tbody/tr[1]/td[6]/a[1]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221104 19:07:32.432" level="INFO">Clicking element 'xpath://tbody/tr[1]/td[6]/a[1]'.</msg>
+<status status="PASS" starttime="20221104 19:07:32.431" endtime="20221104 19:07:32.583"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<arg>delete-row-1-at-sencond-time-after.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20221104 19:07:32.787" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="delete-row-1-at-sencond-time-after.png"&gt;&lt;img src="delete-row-1-at-sencond-time-after.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20221104 19:07:32.585" endtime="20221104 19:07:32.788"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20221104 19:07:32.790" endtime="20221104 19:07:35.001"/>
+</kw>
+<status status="PASS" starttime="20221104 19:07:28.683" endtime="20221104 19:07:35.005"/>
+</test>
+<doc>Search Book Functionality</doc>
+<status status="PASS" starttime="20221104 19:07:15.054" endtime="20221104 19:07:35.012"/>
+</suite>
+<statistics>
+<total>
+<stat pass="3" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="3" fail="0" skip="0" id="s1" name="Delete Book">Delete Book</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
