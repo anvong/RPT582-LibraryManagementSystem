@@ -1,8 +1,8 @@
 *** Settings ***
 Documentation       Search Book Functionality
 Library             SeleniumLibrary
+Resource            ${CURDIR}${/}..\\resource/resource.robot
 
-Resource    book_resource.robot
 *** Variables ***
 
 
