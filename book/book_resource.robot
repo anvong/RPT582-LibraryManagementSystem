@@ -2,8 +2,8 @@
 Library             SeleniumLibrary
 *** Variables ***
 ${BrowserUrl}       http://127.0.0.1:8000    #Scalar
-${UserName}         anvong    #Scalar
-${Password}         123456    #Scalar
+${UserName}         CDU    #Scalar
+${Password}         cdu@@@###    #Scalar
 ${Browser}          chrome
 *** Keywords ***
 Open Web
