@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0 (Python 3.10.8 on win32)" generated="20221107 13:59:14.089" rpa="false" schemaversion="3">
+<suite id="s1" name="Issue Book" source="c:\Program Files\Python310\Scripts\RPT582-LibraryManagementSystem-main\book\issue_book.robot">
+<test id="s1-t1" name="Verify Issue First Book" line="10">
+<kw name="Open Web" library="resource">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${BrowserUrl}</arg>
+<arg>${Browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20221107 13:59:14.265" level="INFO">Opening browser 'chrome' to base url 'http://127.0.0.1:8000'.</msg>
+<status status="PASS" starttime="20221107 13:59:14.264" endtime="20221107 13:59:15.647"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20221107 13:59:15.647" endtime="20221107 13:59:15.769"/>
+</kw>
+<status status="PASS" starttime="20221107 13:59:14.264" endtime="20221107 13:59:15.769"/>
+</kw>
+<kw name="Login Into System" library="resource">
+<arg>${UserName}</arg>
+<arg>${Password}</arg>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>http://127.0.0.1:8000/stafflogin/</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20221107 13:59:15.770" level="INFO">Opening url 'http://127.0.0.1:8000/stafflogin/'</msg>
+<status status="PASS" starttime="20221107 13:59:15.770" endtime="20221107 13:59:15.800"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:loginuname</arg>
+<arg>${UserName}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20221107 13:59:15.801" level="INFO">Typing text 'CDU' into text field 'id:loginuname'.</msg>
+<status status="PASS" starttime="20221107 13:59:15.800" endtime="20221107 13:59:15.854"/>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<arg>id:loginpassword</arg>
+<arg>${Password}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<msg timestamp="20221107 13:59:15.854" level="INFO">Typing password into text field 'id:loginpassword'.</msg>
+<msg timestamp="20221107 13:59:15.878" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20221107 13:59:15.904" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20221107 13:59:15.854" endtime="20221107 13:59:15.904"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>css:input[type='submit']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221107 13:59:15.905" level="INFO">Clicking element 'css:input[type='submit']'.</msg>
+<status status="PASS" starttime="20221107 13:59:15.905" endtime="20221107 13:59:16.499"/>
+</kw>
+<status status="PASS" starttime="20221107 13:59:15.770" endtime="20221107 13:59:16.499"/>
+</kw>
+<kw name="Page Login Success" library="resource">
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>Message : Successfully logged in</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20221107 13:59:16.509" level="INFO">Current page contains text 'Message : Successfully logged in'.</msg>
+<status status="PASS" starttime="20221107 13:59:16.500" endtime="20221107 13:59:16.509"/>
+</kw>
+<status status="PASS" starttime="20221107 13:59:16.500" endtime="20221107 13:59:16.510"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20221107 13:59:16.510" endtime="20221107 13:59:16.513"/>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>http://127.0.0.1:8000/bookissue/</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20221107 13:59:16.514" level="INFO">Opening url 'http://127.0.0.1:8000/bookissue/'</msg>
+<status status="PASS" starttime="20221107 13:59:16.514" endtime="20221107 13:59:16.579"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:book1</arg>
+<arg>PYTHON101</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20221107 13:59:16.579" level="INFO">Typing text 'PYTHON101' into text field 'id:book1'.</msg>
+<status status="PASS" starttime="20221107 13:59:16.579" endtime="20221107 13:59:16.630"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:studentid</arg>
+<arg>S357617</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20221107 13:59:16.631" level="INFO">Typing text 'S357617' into text field 'id:studentid'.</msg>
+<status status="PASS" starttime="20221107 13:59:16.631" endtime="20221107 13:59:16.682"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//button[contains(text(),'Submit')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221107 13:59:16.683" level="INFO">Clicking element '//button[contains(text(),'Submit')]'.</msg>
+<status status="PASS" starttime="20221107 13:59:16.683" endtime="20221107 13:59:16.733"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20221107 13:59:17.600" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20221107 13:59:16.733" endtime="20221107 13:59:17.600"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20221107 13:59:17.601" endtime="20221107 13:59:19.660"/>
+</kw>
+<status status="PASS" starttime="20221107 13:59:14.264" endtime="20221107 13:59:19.661"/>
+</test>
+<test id="s1-t2" name="Verify Issue Second Book" line="22">
+<kw name="Open Web" library="resource">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${BrowserUrl}</arg>
+<arg>${Browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20221107 13:59:19.664" level="INFO">Opening browser 'chrome' to base url 'http://127.0.0.1:8000'.</msg>
+<status status="PASS" starttime="20221107 13:59:19.663" endtime="20221107 13:59:21.010"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20221107 13:59:21.011" endtime="20221107 13:59:21.127"/>
+</kw>
+<status status="PASS" starttime="20221107 13:59:19.663" endtime="20221107 13:59:21.127"/>
+</kw>
+<kw name="Login Into System" library="resource">
+<arg>${UserName}</arg>
+<arg>${Password}</arg>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>http://127.0.0.1:8000/stafflogin/</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20221107 13:59:21.128" level="INFO">Opening url 'http://127.0.0.1:8000/stafflogin/'</msg>
+<status status="PASS" starttime="20221107 13:59:21.128" endtime="20221107 13:59:21.156"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:loginuname</arg>
+<arg>${UserName}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20221107 13:59:21.157" level="INFO">Typing text 'CDU' into text field 'id:loginuname'.</msg>
+<status status="PASS" starttime="20221107 13:59:21.156" endtime="20221107 13:59:21.210"/>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<arg>id:loginpassword</arg>
+<arg>${Password}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<msg timestamp="20221107 13:59:21.211" level="INFO">Typing password into text field 'id:loginpassword'.</msg>
+<msg timestamp="20221107 13:59:21.236" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20221107 13:59:21.265" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20221107 13:59:21.210" endtime="20221107 13:59:21.265"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>css:input[type='submit']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221107 13:59:21.266" level="INFO">Clicking element 'css:input[type='submit']'.</msg>
+<status status="PASS" starttime="20221107 13:59:21.265" endtime="20221107 13:59:21.815"/>
+</kw>
+<status status="PASS" starttime="20221107 13:59:21.127" endtime="20221107 13:59:21.815"/>
+</kw>
+<kw name="Page Login Success" library="resource">
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>Message : Successfully logged in</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20221107 13:59:21.824" level="INFO">Current page contains text 'Message : Successfully logged in'.</msg>
+<status status="PASS" starttime="20221107 13:59:21.815" endtime="20221107 13:59:21.825"/>
+</kw>
+<status status="PASS" starttime="20221107 13:59:21.815" endtime="20221107 13:59:21.825"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20221107 13:59:21.825" endtime="20221107 13:59:21.829"/>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>http://127.0.0.1:8000/bookissue/</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20221107 13:59:21.830" level="INFO">Opening url 'http://127.0.0.1:8000/bookissue/'</msg>
+<status status="PASS" starttime="20221107 13:59:21.830" endtime="20221107 13:59:21.888"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:book1</arg>
+<arg>PYTHON102</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20221107 13:59:21.889" level="INFO">Typing text 'PYTHON102' into text field 'id:book1'.</msg>
+<status status="PASS" starttime="20221107 13:59:21.888" endtime="20221107 13:59:21.940"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:studentid</arg>
+<arg>s354803</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20221107 13:59:21.940" level="INFO">Typing text 's354803' into text field 'id:studentid'.</msg>
+<status status="PASS" starttime="20221107 13:59:21.940" endtime="20221107 13:59:21.991"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//button[contains(text(),'Submit')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221107 13:59:21.991" level="INFO">Clicking element '//button[contains(text(),'Submit')]'.</msg>
+<status status="PASS" starttime="20221107 13:59:21.991" endtime="20221107 13:59:22.047"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20221107 13:59:22.920" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-2.png"&gt;&lt;img src="selenium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20221107 13:59:22.047" endtime="20221107 13:59:22.920"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20221107 13:59:22.921" endtime="20221107 13:59:24.985"/>
+</kw>
+<status status="PASS" starttime="20221107 13:59:19.662" endtime="20221107 13:59:24.985"/>
+</test>
+<test id="s1-t3" name="Verify Issue Third Book" line="34">
+<kw name="Open Web" library="resource">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${BrowserUrl}</arg>
+<arg>${Browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20221107 13:59:24.986" level="INFO">Opening browser 'chrome' to base url 'http://127.0.0.1:8000'.</msg>
+<status status="PASS" starttime="20221107 13:59:24.986" endtime="20221107 13:59:26.430"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20221107 13:59:26.430" endtime="20221107 13:59:26.538"/>
+</kw>
+<status status="PASS" starttime="20221107 13:59:24.986" endtime="20221107 13:59:26.538"/>
+</kw>
+<kw name="Login Into System" library="resource">
+<arg>${UserName}</arg>
+<arg>${Password}</arg>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>http://127.0.0.1:8000/stafflogin/</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20221107 13:59:26.539" level="INFO">Opening url 'http://127.0.0.1:8000/stafflogin/'</msg>
+<status status="PASS" starttime="20221107 13:59:26.539" endtime="20221107 13:59:26.569"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:loginuname</arg>
+<arg>${UserName}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20221107 13:59:26.569" level="INFO">Typing text 'CDU' into text field 'id:loginuname'.</msg>
+<status status="PASS" starttime="20221107 13:59:26.569" endtime="20221107 13:59:26.622"/>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<arg>id:loginpassword</arg>
+<arg>${Password}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<msg timestamp="20221107 13:59:26.623" level="INFO">Typing password into text field 'id:loginpassword'.</msg>
+<msg timestamp="20221107 13:59:26.647" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20221107 13:59:26.675" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20221107 13:59:26.622" endtime="20221107 13:59:26.675"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>css:input[type='submit']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221107 13:59:26.676" level="INFO">Clicking element 'css:input[type='submit']'.</msg>
+<status status="PASS" starttime="20221107 13:59:26.675" endtime="20221107 13:59:27.272"/>
+</kw>
+<status status="PASS" starttime="20221107 13:59:26.539" endtime="20221107 13:59:27.272"/>
+</kw>
+<kw name="Page Login Success" library="resource">
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>Message : Successfully logged in</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20221107 13:59:27.284" level="INFO">Current page contains text 'Message : Successfully logged in'.</msg>
+<status status="PASS" starttime="20221107 13:59:27.273" endtime="20221107 13:59:27.285"/>
+</kw>
+<status status="PASS" starttime="20221107 13:59:27.272" endtime="20221107 13:59:27.285"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20221107 13:59:27.285" endtime="20221107 13:59:27.288"/>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>http://127.0.0.1:8000/bookissue/</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20221107 13:59:27.288" level="INFO">Opening url 'http://127.0.0.1:8000/bookissue/'</msg>
+<status status="PASS" starttime="20221107 13:59:27.288" endtime="20221107 13:59:27.349"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:book1</arg>
+<arg>PYTHON103</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20221107 13:59:27.349" level="INFO">Typing text 'PYTHON103' into text field 'id:book1'.</msg>
+<status status="PASS" starttime="20221107 13:59:27.349" endtime="20221107 13:59:27.400"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:studentid</arg>
+<arg>S361035</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20221107 13:59:27.401" level="INFO">Typing text 'S361035' into text field 'id:studentid'.</msg>
+<status status="PASS" starttime="20221107 13:59:27.400" endtime="20221107 13:59:27.448"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//button[contains(text(),'Submit')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221107 13:59:27.449" level="INFO">Clicking element '//button[contains(text(),'Submit')]'.</msg>
+<status status="PASS" starttime="20221107 13:59:27.449" endtime="20221107 13:59:27.506"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20221107 13:59:28.369" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-3.png"&gt;&lt;img src="selenium-screenshot-3.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20221107 13:59:27.506" endtime="20221107 13:59:28.369"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20221107 13:59:28.370" endtime="20221107 13:59:30.441"/>
+</kw>
+<status status="PASS" starttime="20221107 13:59:24.985" endtime="20221107 13:59:30.441"/>
+</test>
+<doc>Issue Book Functionality</doc>
+<status status="PASS" starttime="20221107 13:59:14.093" endtime="20221107 13:59:30.443"/>
+</suite>
+<statistics>
+<total>
+<stat pass="3" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="3" fail="0" skip="0" id="s1" name="Issue Book">Issue Book</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
