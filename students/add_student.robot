@@ -1,5 +1,5 @@
 *** Settings ***
-Documentation       Search Book Functionality
+Documentation       Add Students Functionality
 Library             SeleniumLibrary
 Resource            ${CURDIR}${/}..\\resource/resource.robot
 
