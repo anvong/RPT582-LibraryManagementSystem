@@ -1,5 +1,5 @@
 *** Settings ***
-Documentation       Issue Book Functionality
+Documentation       Return Book Functionality
 Library             SeleniumLibrary
 Resource            ${CURDIR}${/}..\\resource/resource.robot
 
