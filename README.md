@@ -22,7 +22,7 @@ Every weeks we will need to submit the group works:
     ![image](https://user-images.githubusercontent.com/11452660/189360229-9efac6eb-f1e2-4e87-b1ee-443bf8e9f123.png)
 
     2. Open the terminal and change to the source code folder. For example: C:\CDU_coding\PRT582-Code\LMS\TechVidvanLibrary  
-    3. Run this code to start the server: py .\manage.py runserver
+    3. Run this code to start the server: py .\manage.py runserver (For mac: python manage.py runserver)
     ![image](https://user-images.githubusercontent.com/11452660/189360385-35cc47a8-1061-4b3f-9242-aabb01f453ff.png)
 
     4. Access the localhost:8000 from browser to use the web app
