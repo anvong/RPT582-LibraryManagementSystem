@@ -3,13 +3,18 @@
 Our assignment for PRT582 SOFTWARE ENGINEERING: PROCESS AND TOOLS with project name: Library Management System In Python
 Source code can be found here: https://techvidvan.com/tutorials/python-library-management-system/
 
+We also put the original source inside the folder: LMS-App-Source/TechVidvanLibrary
+
 Every weeks we will need to submit the group works:
 1. Week 1 - team information (form 1)
 2. Week 2 - team nomitates the project list (form 2)
 3. Week 3 - team to submit
      * Requirement and User Story of 3 roles: Normal users, Admin, Librarian 
      * Show the installation on working PC
-
+4. Week 4-7 - Practice several tool introduced in class
+5. Week 8-11 - Working on group assignement, test tool & report, automated test scrips & test result
+6. Week 11 End - Presentation slides, 2 mins video record.
+7. Week 12 (14th Nov) - Group presentation in class and on learnline for external student members.
 
 ## Testing environment setup
 + Application source code can be found here: https://techvidvan.s3.amazonaws.com/python-projects/library-management-system-code.zip
@@ -21,10 +26,13 @@ Every weeks we will need to submit the group works:
     1. Unzip the source code into a folder
     ![image](https://user-images.githubusercontent.com/11452660/189360229-9efac6eb-f1e2-4e87-b1ee-443bf8e9f123.png)
 
-    2. Open the terminal and change to the source code folder. For example: C:\CDU_coding\PRT582-Code\LMS\TechVidvanLibrary  
+    2. Open the terminal and change to the source code folder. 
+    For example: C:\CDU_coding\PRT582-Code\LMS\TechVidvanLibrary  
 
 
     3. Run this code to start the server: py .\manage.py runserver  (For mac os: python manage.py runserver)
+    Make sure the server runs on port 8000 because our robot scripts will test on port 8000.
+    
     ![image](https://user-images.githubusercontent.com/11452660/189360385-35cc47a8-1061-4b3f-9242-aabb01f453ff.png)
 
     4. Access the localhost:8000 from browser to use the web app
@@ -47,6 +55,12 @@ Every weeks we will need to submit the group works:
     2. Add the db.sqlite3 to SQLite Studio to open the database then we can view/edit/add/delete table content.
     ![image](https://user-images.githubusercontent.com/11452660/189360027-a78bdb07-4efb-430e-98f3-b1878e940838.png)
 
++ Automated Functional Test Scripts are inside each sub folder: book, students, test....
+![image](https://user-images.githubusercontent.com/11452660/201474045-e04de629-6a64-4442-ba92-4620cb93de1d.png)
+
+
++ Automated Functional test result: 
+![image](https://user-images.githubusercontent.com/11452660/201473956-52e58778-0e39-4f2c-8f93-a5a9be025e90.png)
 
     
         
